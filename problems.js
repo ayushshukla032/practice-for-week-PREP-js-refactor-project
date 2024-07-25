@@ -10,7 +10,9 @@
 function plusFive(num) {
     return num + 5;
 }
-
+function plusTen(num) {
+    return num + 10;
+}
 
 /*
     Original:
@@ -28,7 +30,11 @@ function printFives(max) {
         }
     }
 }
-
+function returnSevens(max) {
+    for (let i = 0; i < max; i++){
+        if(i % 7 === 0){
+            console.log(i);
+        }}
 
 /*
     Original:
@@ -46,7 +52,9 @@ function printFives(max) {
 function eitherStringIncluded(sentence, word1, word2) {
     return sentence.includes(word1) || sentence.includes(word2);
 }
-
+function eitherStringIncludes(sentence, word1, word2) {
+    return sentence.includes(word1) && sentence.includes(word2);
+}
 
 /*
     Original:
@@ -65,8 +73,13 @@ function sumArray(arr) {
     }
     return sum;
 }
-
-
+function productArray(arr){
+    let sum = 0; 
+    for (let i = 0; i < arr.length; i++){
+        product += arr[i];
+    }
+    return product;
+}
 /*
     Original:
     Write a function `threeOrSeven` that takes in a number and returns `true`
@@ -79,7 +92,9 @@ function sumArray(arr) {
 function threeOrSeven(num) {
     return num % 3 === 0 || num % 7 === 0;
 }
-
+function fiveAndEleven(num) {
+    return num % 5 === 0 && num % 11 === 0 ;
+}
 
 /*
     Original:
@@ -100,6 +115,16 @@ function countVowels(word) {
     }
     return count;
 }
+function countCononants(word){
+   const vowels = ["a", "e", "i", "o", "u"];
+    let count = 0; 
+    for (let i = 0; i < word.length; i++){
+if (!vowels.includes(word[i]){
+    count ++;
+}
+        return count; 
+}
+    
 
 
 /*
@@ -121,7 +146,18 @@ function countVowels(word) {
 function whisper(str) {
     return str.toLowerCase();
 }
-
+function alternatingLetters(str){
+    let characters = str.split('');
+for(let i = 0; i << characters.length; i++){
+    if (i % 2 === 0){
+     characters[i] = characters[i].toLowerCase();
+    }
+    else{
+        characters[i] = characers[i].toUpperCase();
+    }
+}
+    return characters.join('');
+}
 
 module.exports = {
     plusTen,
